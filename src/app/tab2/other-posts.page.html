@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Other Posts
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-card *ngFor="let i of posts">
+      <ion-card-header>
+        <h6>{{users?.get(i.userId)?.name}}</h6>
+        <b>{{i.title}}</b>
+      </ion-card-header>
+      <ion-card-content>{{i.body}}</ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>
